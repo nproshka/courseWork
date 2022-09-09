@@ -1,3 +1,5 @@
+import java.util.EmptyStackException;
+
 public class Main {
     public static void main(String[] args) {
         Employee[] employee10 = new Employee[10];
@@ -13,11 +15,35 @@ public class Main {
         employee10[9] = new Employee("Кузив Эльвира Васильевна", 3, 51232);
 
         EmployeeService.viewEmployees(employee10);
+        System.out.println();
         EmployeeService.calculateSalarySum(employee10);
+        System.out.println();
         EmployeeService.findPersonWithMaxSalary(employee10);
+        System.out.println();
         EmployeeService.findPersonWithMinSalary(employee10);
+        System.out.println();
         EmployeeService.calculateSalaryArray(employee10);
+        System.out.println();
         EmployeeService.viewFullNameEmployees(employee10);
+        System.out.println();
+        EmployeeService.indexSalary(employee10);
+        System.out.println();
+        EmployeeService.findPersonInDeptWithMinSalary(employee10, 3);
+        System.out.println();
+        EmployeeService.findPersonInDeptWithMaxSalary(employee10, 1);
+        System.out.println();
+        EmployeeService.calculateSalarySumInDept(employee10, 2);
+        System.out.println();
+        EmployeeService.calculateSalarySumArrayInDept(employee10, 3);
+        System.out.println();
+        EmployeeService.indexSalaryInDept(employee10, 3);
+        System.out.println();
+        EmployeeService.viewEmployeesInDept(employee10, 3);
+        System.out.println();
+        EmployeeService.compareLessSalary(employee10,100_000);
+        System.out.println();
+        EmployeeService.compareMoreSalary(employee10,100_000);
+
 
 
 

@@ -1,20 +1,22 @@
 import java.util.Objects;
 
 public class Employee {
+    private static int count = 1;
     private String fullName;
     private int dept;
-    private int salary;
-    private static int id;
+    private double salary;
+    private int id = 0;
+
 
     public int getId () {
-        id++;
         return id;
         }
 
-    public Employee(String name, int dept, int salary) {
+    public Employee(String name, int dept, double salary) {
         this.fullName = name;
         this.dept = dept;
         this.salary = salary;
+        id = count++;
     }
 
     public String getFullName() {
@@ -25,7 +27,7 @@ public class Employee {
         return dept;
     }
 
-    public int getSalary() {
+    public double getSalary() {
         return salary;
     }
 
@@ -37,7 +39,7 @@ public class Employee {
         this.dept = dept;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 
